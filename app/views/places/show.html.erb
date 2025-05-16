@@ -3,14 +3,15 @@
 <h3>Journal Entries</h3>
 
 <ul>
-<% for journal_entry in @journal_entries%>
-  <li><%= journal_entry["activity"]%></li>
-  <li><%= journal entry["date"] %></li>
+<% for entry in @entries%>
+  <li><%= entry["title"]%></li>
+  <li><%= entry["occurred_on"] %></li>
+   <li><%= entry["description"] %></li>
   <%end%>
 </ul>
 
 <p>
-  <a href="/journal_entries/new?place_id=<%= place["id"]%>">New Journal Entry</a>
+  <a href="/entries/new?place_id=<%= place["id"]%>">New Journal Entry</a>
 </p>
 
 <p>

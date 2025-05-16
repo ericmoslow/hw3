@@ -1,0 +1,18 @@
+<h1><%= @place["name"] %></h1>
+
+<h3>Journal Entries</h3>
+
+<ul>
+<% for journal_entry in @journal_entries%>
+  <li><%= journal_entry["activity"]%></li>
+  <li><%= journal entry["date"] %></li>
+  <%end%>
+</ul>
+
+<p>
+  <a href="/journal_entries/new?place_id=<%= place["id"]%>">New Journal Entry</a>
+</p>
+
+<p>
+  <a href="/places">Back to All Places</a>
+</p>

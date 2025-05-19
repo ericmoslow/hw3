@@ -6,10 +6,11 @@ end
 
 def show
   @place = Place.find_by({"id"=> params["id"]})
+  @entries = Entry.where({ "place_id" => @place["id"]})
 end
 
 def new
-  @place = Place.find_by({"id" => params["place_id"]})
+  @place = Place.new
 end
 
 def create
@@ -18,13 +19,4 @@ def create
   @place.save
   redirect_to "/places"
 end
-
-
-
-
-
-
-
-
-
 end

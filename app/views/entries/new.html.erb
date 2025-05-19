@@ -1,10 +1,7 @@
-<h1>New Journal Entry for <%= @place["name"] %></h1>
+<h1>New Journal Entry for <!%= @place["name"] %></h1>
 
-
-
-
-<form action="/places/<%= @place["id"] %>/entries" method="post">
-<input type ="hidden" name="place_id" value="<%= @place["id"] %>">
+<form action="/places" method="post">
+<input type ="hidden" name="place_id">
 
   <p>
     <label for="title">Title</label>
